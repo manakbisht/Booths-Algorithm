@@ -69,6 +69,10 @@ class DivisionAlgorithm
 		if(registerA[0]==1)
 			Main.add(registerA,registerM);
 		r=Main.decimal(registerA,registerA.length);
+		if(flag==1)
+			Main.optimisedTwosComplement(dividend,dividend.length);
+		if(f==1)
+			Main.optimisedTwosComplement(divisor,divisor.length);
 		if((flag==1&&f==0)||(flag==0&&f==1))
 			Main.optimisedTwosComplement(registerQ,registerQ.length);
 		if(((registerQ[0]==1&&f==0)||(registerQ[0]==0&&f==1))&&!isZero(registerQ))
