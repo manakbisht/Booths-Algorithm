@@ -130,7 +130,10 @@ public class Main
 			sum += x[i]*Math.pow(2,length-i-1);
 		}
 		if(flag==1) 
+		{
+			optimisedTwosComplement(x,length);
 			return -sum;
+		}
 		return sum;
 	}
 	public static void clearRegister(byte[] register) 
@@ -187,7 +190,7 @@ public class Main
 	public static String getString(byte x[],int length)
 	{
 		String a="";
-		for(int i=0;i<length-1;i++)
+		for(int i=0;i<length;i++)
 			a+=String.valueOf(x[i]);
 		return a;
 	}
@@ -210,7 +213,9 @@ public class Main
 				BoothsMultiplicationAlgorithm.multiply(x1,x2);
 				DivisionAlgorithm.divide(x1,x2);
 				String ans="Number 1: "+x+" Number 2: "+y+"\n";
-				out.println(getans(ans));
+				String Ans=getans(ans);
+				out.println(Ans);
+				System.out.println(Ans);
 			}
 			catch(InputMismatchException e)
 			{

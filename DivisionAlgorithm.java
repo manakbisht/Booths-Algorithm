@@ -72,9 +72,15 @@ class DivisionAlgorithm
 		if((flag==1&&f==0)||(flag==0&&f==1))
 			Main.optimisedTwosComplement(registerQ,registerQ.length);
 		if(((registerQ[0]==1&&f==0)||(registerQ[0]==0&&f==1))&&!isZero(registerQ))
+		{
+			Main.optimisedTwosComplement(registerA,registerA.length);
 			r=-r;
+		}
 		else if(flag==1)
+		{
+			Main.optimisedTwosComplement(registerA,registerA.length);
 			r=-r;
+		}
 		q=Main.decimal(registerQ,registerQ.length);
 	}
 	public static String getr()
